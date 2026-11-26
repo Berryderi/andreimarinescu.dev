@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; script-src 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Market Impact Lab: Andrei Marinescu</title>
+  <meta name="description" content="35 pre-registered model variants tried to predict Coinbase stock's next hour. None beat trading costs. What it tried and what it found.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner pad">
+      <a class="wordmark" href="../"><span class="dot" aria-hidden="true"></span>Andrei Marinescu</a>
+      <nav class="topnav" aria-label="Main">
+        <ul>
+          <li><a href="../#work">Work</a></li>
+          <li><a href="../#about">About</a></li>
+          <li><a href="../#now">Now</a></li>
+          <li><a href="../#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="case-hero grid12 pad">
+      <div class="c1-8">
+        <p class="crumb label"><a href="../#index">Work</a><span aria-hidden="true">/</span><span>01</span></p>
+        <h1>Market Impact Lab</h1>
+        <p class="summary">Can a map of everything that moves Coinbase stock predict its next 60 minutes well enough to beat trading costs? I built the test to answer that honestly. The answer is no.</p>
+      </div>
+      <dl class="case-spec c9-12" aria-label="Project facts">
+        <div><dt>Status</dt><dd><span class="status status--fail">Concluded: no edge</span></dd></div>
+          <div><dt>Built</dt><dd>Nov 2026</dd></div>
+          <div><dt>Role</dt><dd>Solo, directing Claude Code agents</dd></div>
+          <div><dt>Stack</dt><dd>Python, LightGBM, PyTorch, LoRA, pytest</dd></div>
+          <div><dt>Code</dt><dd>Private repository</dd></div>
+          <div><dt>Money</dt><dd>None. Paper trading only</dd></div>
+      </dl>
+    </header>
+
+  <figure class="case-cover">
+    <div class="media duo"><img src="../assets/shots/market-impact-lab.png" width="1280" height="800" alt="The project's results board: a table of every development variant with trades, hit rate, net basis points per trade, quarters positive and verdict."></div>
+    <figcaption class="muted">The results board, generated from the repo's logged trials.</figcaption>
+  </figure>
+
+    <div class="case-body grid12 pad">
+      <nav class="toc" aria-label="On this page">
+        <div class="toc-inner">
+          <p class="label">On this page</p>
+          <ol>
+            <li><a href="#part-1"><span class="label">01</span>Problem</a></li>
+            <li><a href="#part-2"><span class="label">02</span>What I built</a></li>
+            <li><a href="#part-3"><span class="label">03</span>How it was tested</a></li>
+            <li><a href="#part-4"><span class="label">04</span>Results</a></li>
+            <li><a href="#part-5"><span class="label">05</span>What I learned</a></li>
+            <li><a href="#part-6"><span class="label">06</span>Links</a></li>
+          </ol>
+        </div>
+      </nav>
+      <div class="case-content">
+        <section class="sheet-section" id="part-1" aria-labelledby="s1">
+          <h2 id="s1"><span class="section-index">01</span>Problem</h2>
+          <div class="sheet-body">
+          <p>Coinbase (COIN) moves with bitcoin, ether, other crypto stocks, the Nasdaq, scheduled news and its own trading volume. If I mapped all of that, could a model call the next hour's direction often enough to make money after costs?</p>
+          <p>Most backtests that say yes are fooling themselves: they peek at future data, try fifty ideas and report the best one, or assume trading is free. I wanted a setup where a yes would actually mean something.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-2" aria-labelledby="s2">
+          <h2 id="s2"><span class="section-index">02</span>What I built</h2>
+          <div class="sheet-body">
+          <ul>
+            <li>A clean 15-minute price history going back to 2021, checked for gaps and errors before any model sees it.</li>
+            <li><strong>Model A:</strong> gradient-boosted trees (LightGBM) on signals from the impact map.</li>
+            <li><strong>Model B:</strong> a small language model fine-tuned on my own GPU, reading the market as text. Later a larger version.</li>
+            <li>A frozen copy of the best model that logs paper calls every trading day, with no orders and no money.</li>
+          </ul>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-3" aria-labelledby="s3">
+          <h2 id="s3"><span class="section-index">03</span>How it was tested</h2>
+          <div class="sheet-body">
+          <ul>
+            <li><strong>Walk-forward:</strong> always trained on the past and tested on what came next, over 17 quarters from April 2022 to April 2026.</li>
+            <li><strong>Locked final test:</strong> a final stretch of data that no model has been scored on.</li>
+            <li><strong>Checks on the test itself:</strong> automatic checks that catch peeking at future data and a broken test setup.</li>
+            <li><strong>Pass bar written first:</strong> each variant's pass bar was written down before it ran, and later variants also had to beat pure noise.</li>
+            <li><strong>Costs included:</strong> every result is net of trading costs.</li>
+          </ul>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-4" aria-labelledby="s4">
+          <h2 id="s4"><span class="section-index">04</span>Results</h2>
+          <div class="sheet-body">
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Selected rows, development folds 2022-04 to 2026-04. Net is per trade after cost"><table class="data-table">
+            <caption>Selected rows, development folds 2022-04 to 2026-04. Net is per trade after costs. bp = basis point, 0.01%.</caption>
+            <thead>
+              <tr><th scope="col">Variant</th><th scope="col" class="num">Trades</th><th scope="col" class="num">Hit rate</th><th scope="col" class="num">Net bp</th><th scope="col">Verdict</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Model A v1 (price features)</th><td class="num">9,809</td><td class="num">51.8%</td><td class="num">+0.61</td><td>Weak: one quarter carried it</td></tr>
+              <tr><th scope="row">Model A v1, averaged over 5 seeds</th><td class="num">n/a</td><td class="num">n/a</td><td class="num">−3.09</td><td>Fail: v1 was seed luck</td></tr>
+              <tr><th scope="row">Model B, small language model</th><td class="num">10,438</td><td class="num">49.6%</td><td class="num">−5.82</td><td>Fail</td></tr>
+              <tr><th scope="row">Model B, larger version (17.8 h run)</th><td class="num">2,610</td><td class="num">49.8%</td><td class="num">−5.14</td><td>Fail</td></tr>
+              <tr><th scope="row">Shuffled labels, best of 25</th><td class="num">n/a</td><td class="num">n/a</td><td class="num">+2.69</td><td>Noise, for reference</td></tr>
+            </tbody>
+          </table></div>
+          <ul>
+            <li>35 model variants scored. None passed its bar.</li>
+            <li>The best Model A run made +0.61 bp per trade, but without its single best quarter it lost 8,222 bp. Pure noise (shuffled labels) reached +2.69 bp, above every COIN variant.</li>
+            <li>Model B's training loss stayed at a coin flip. It mostly learned one direction per year, and simply taking that direction every time did slightly better than the model.</li>
+            <li>Measured quotes put COIN's real round-trip cost near 13 bp, not the 3.7 bp I first assumed. At that cost a model needs a 54 to 56.5% hit rate to break even; the best any variant reached was 52.9%.</li>
+          </ul>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-5" aria-labelledby="s5">
+          <h2 id="s5"><span class="section-index">05</span>What I learned</h2>
+          <div class="sheet-body">
+          <div class="callout">
+            <p>The most useful thing I built wasn't a model. It was the set of checks that kept me from believing a lucky result.</p>
+          </div>
+          <ul>
+            <li>Average over seeds before believing anything. My best early result vanished when I did.</li>
+            <li>Measure costs; don't assume them. My cost assumption was off by more than three times.</li>
+            <li>A bigger model doesn't fix weak inputs. A model several times larger did no better.</li>
+            <li>Writing the pass bar down first made it easy to stop. Training is paused on both tracks.</li>
+          </ul>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-6" aria-labelledby="s6">
+          <h2 id="s6"><span class="section-index">06</span>Links</h2>
+          <div class="sheet-body">
+          <p>The repository is private: it holds market data licensed for personal use. Happy to walk through the code on a call.</p>
+          <p class="dated">Revision: 25 November 2026. A frozen model keeps logging paper calls until 200 trades or 21 May 2027.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <a class="next-band pad" href="agent-team.html">
+      <span class="label">Next project · 02</span>
+      <span class="t">Running a team of AI agents <span class="arrow" aria-hidden="true">→</span></span>
+    </a>
+  </main>
+
+  <footer class="site-footer pad">
+    <div class="row">
+      <p>&copy; 2026 Andrei Marinescu</p>
+      <p class="muted">No trackers, cookies or forms. Updated 25 Nov 2026.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; script-src 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Running a team of AI agents: Andrei Marinescu</title>
+  <meta name="description" content="I run about twenty Claude Code sessions as one team. A coordinator splits up the work, each project has a lead and builders, and anything that needs money, an account or my name comes to me first.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner pad">
+      <a class="wordmark" href="../"><span class="dot" aria-hidden="true"></span>Andrei Marinescu</a>
+      <nav class="topnav" aria-label="Main">
+        <ul>
+          <li><a href="../#work">Work</a></li>
+          <li><a href="../#about">About</a></li>
+          <li><a href="../#now">Now</a></li>
+          <li><a href="../#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="case-hero grid12 pad">
+      <div class="c1-8">
+        <p class="crumb label"><a href="../#index">Work</a><span aria-hidden="true">/</span><span>02</span></p>
+        <h1>Running a team of AI agents</h1>
+        <p class="summary">I run about twenty Claude Code sessions as one team. A coordinator splits up the work, each project has a lead and builders, and anything that needs money, an account or my name comes to me first.</p>
+      </div>
+      <dl class="case-spec c9-12" aria-label="Project facts">
+        <div><dt>Status</dt><dd><span class="status status--ok">In daily use</span></dd></div>
+          <div><dt>Built</dt><dd>Sep–Nov 2026</dd></div>
+          <div><dt>Role</dt><dd>Designer and operator</dd></div>
+          <div><dt>Stack</dt><dd>Claude Code, Herdr, hooks, git worktrees</dd></div>
+          <div><dt>Code</dt><dd>Private repository</dd></div>
+          <div><dt>Scale</dt><dd>24 sessions on one board</dd></div>
+      </dl>
+    </header>
+
+  <figure class="case-cover">
+    <div class="media plain natural"><img src="../assets/diagrams/agent-team.svg" width="1280" height="800" alt="Diagram: I approve anything risky; a coordinator hands work to four project teams, each with a lead and builders; the teams share notes on progress and decisions; helper models give research and second opinions."></div>
+    <figcaption class="muted">How the team is organised. Only I approve anything risky.</figcaption>
+  </figure>
+
+    <div class="case-body grid12 pad">
+      <nav class="toc" aria-label="On this page">
+        <div class="toc-inner">
+          <p class="label">On this page</p>
+          <ol>
+            <li><a href="#part-1"><span class="label">01</span>Problem</a></li>
+            <li><a href="#part-2"><span class="label">02</span>What I built</a></li>
+            <li><a href="#part-3"><span class="label">03</span>Results</a></li>
+            <li><a href="#part-4"><span class="label">04</span>What I learned</a></li>
+            <li><a href="#part-5"><span class="label">05</span>Links</a></li>
+          </ol>
+        </div>
+      </nav>
+      <div class="case-content">
+        <section class="sheet-section" id="part-1" aria-labelledby="s1">
+          <h2 id="s1"><span class="section-index">01</span>Problem</h2>
+          <div class="sheet-body">
+          <p>One AI session is easy. Twenty at once step on each other: two edit the same file, one decides something only I should decide, another says "done" without checking. I wanted a setup where many agents can work in parallel and I can still trust what comes back.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-2" aria-labelledby="s2">
+          <h2 id="s2"><span class="section-index">02</span>What I built</h2>
+          <div class="sheet-body">
+          <ul>
+              <li>A coordinator that hands out work and keeps track of who is doing what.</li>
+              <li>A small team per project: a lead that plans and reviews, and builders that do the work.</li>
+              <li>Shared notes, so a new session can pick up where another one stopped.</li>
+              <li>One rule above the rest: anything involving money, accounts, publishing or contacting a person waits for me.</li>
+              <li>Helper models from other companies for research and second opinions, checked before anything they say is used.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-3" aria-labelledby="s3">
+          <h2 id="s3"><span class="section-index">03</span>Results</h2>
+          <div class="sheet-body">
+          <ul>
+              <li>35 trading-model variants run and checked in under a week (see <a href="market-impact-lab.html">Market Impact Lab</a>).</li>
+              <li>Decisions that need me arrive as short written questions with a recommended answer, so the agents don't guess and don't stall.</li>
+              <li>One real failure: a test touched one of my real apps and a key ended up in a local log. It was caught the same day, I replaced the key, and tests now only use windows they create themselves.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-4" aria-labelledby="s4">
+          <h2 id="s4"><span class="section-index">04</span>What I learned</h2>
+          <div class="sheet-body">
+          <ul>
+              <li>Agents are fast and confident. The checks around them are what make them trustworthy.</li>
+              <li>Written notes beat chat: work survives when a session ends.</li>
+              <li>Rules get written after something goes wrong.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-5" aria-labelledby="s5">
+          <h2 id="s5"><span class="section-index">05</span>Links</h2>
+          <div class="sheet-body">
+          <p>The setup is private.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <a class="next-band pad" href="jev-launcher.html">
+      <span class="label">Next project · 03</span>
+      <span class="t">Jev Launcher <span class="arrow" aria-hidden="true">→</span></span>
+    </a>
+  </main>
+
+  <footer class="site-footer pad">
+    <div class="row">
+      <p>&copy; 2026 Andrei Marinescu</p>
+      <p class="muted">No trackers, cookies or forms. Updated 25 Nov 2026.</p>
+    </div>
+  </footer>
+</body>
+</html>

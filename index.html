@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Andrei Marinescu</title>
+  <meta name="description" content="Andrei Marinescu builds AI tools with teams of Claude Code agents and publishes the numbers, including the experiments that failed.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner pad">
+      <a class="wordmark" href="./"><span class="dot" aria-hidden="true"></span>Andrei Marinescu</a>
+      <nav class="topnav" aria-label="Main">
+        <ul>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#now">Now</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero grid12 pad" aria-labelledby="hero-title">
+      <div class="c1-7">
+        <p class="label section-num">AI tools and agent systems</p>
+        <h1 id="hero-title">I build AI tools, then <em>measure</em> whether they work.</h1>
+        <p class="lede">Most of my software is written by teams of Claude Code agents that I direct. I set the checks, read the results, and publish the numbers, including the experiments that failed.</p>
+        <div class="actions">
+          <a class="btn btn-blue" href="#work">See the work <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-line" href="#contact">Get in touch</a>
+        </div>
+        <p class="hero-meta label"><span>Grade 12</span><span>Ontario, Canada</span></p>
+      </div>
+      <div class="hero-art c8-12" aria-hidden="true">
+        <svg viewBox="0 0 600 600" focusable="false">
+          <defs><clipPath id="planet-clip"><circle cx="300" cy="300" r="165"/></clipPath></defs>
+          <circle class="f-none s-ink" cx="300" cy="300" r="288" stroke-width="1.5" stroke-dasharray="2 9"/>
+          <circle class="f-none s-ink" cx="300" cy="300" r="244" stroke-width="1.5"/>
+          <circle class="f-none s-ink" cx="300" cy="300" r="200" stroke-width="1"/>
+          <g class="s-ink" stroke-width="2">
+            <line x1="300" y1="0" x2="300" y2="22"/><line x1="300" y1="578" x2="300" y2="600"/>
+            <line x1="0" y1="300" x2="22" y2="300"/><line x1="578" y1="300" x2="600" y2="300"/>
+          </g>
+          <g transform="rotate(-18 300 300)">
+            <path class="f-none s-blue" d="M8 300 A292 74 0 0 1 592 300" stroke-width="2"/>
+          </g>
+          <circle class="f-blue" cx="300" cy="300" r="165"/>
+          <g clip-path="url(#planet-clip)" class="s-paper" stroke-width="2">
+            <line x1="120" y1="236" x2="480" y2="236"/>
+            <line x1="120" y1="268" x2="480" y2="268"/>
+            <line x1="120" y1="372" x2="480" y2="372"/>
+          </g>
+          <circle class="f-tint" cx="242" cy="232" r="22"/>
+          <g transform="rotate(-18 300 300)">
+            <path class="f-none s-blue" d="M8 300 A292 74 0 0 0 592 300" stroke-width="2"/>
+          </g>
+          <g class="orbit-spin spin-30"><circle class="f-ink s-paper" cx="300" cy="56" r="11" stroke-width="3"/></g>
+          <g class="orbit-spin spin-48 rev"><rect class="f-blue s-ink" x="7" y="293" width="14" height="14" stroke-width="2"/></g>
+          <g class="orbit-spin spin-80"><circle class="f-tint s-ink" cx="300" cy="500" r="8" stroke-width="2"/></g>
+          <text class="svg-label f-ink" x="372" y="590">FIG. 0 / ORBITS</text>
+        </svg>
+      </div>
+    </section>
+
+    <section class="facts" aria-label="In numbers">
+      <ul class="pad">
+        <li><span class="n">13</span><span class="t">projects written up, failures included</span></li>
+        <li><span class="n">0 / 35</span><span class="t">trading-model variants passed the bar set before they ran</span></li>
+        <li><span class="n">24</span><span class="t">Claude Code sessions on one live board</span></li>
+        <li><span class="n">1,195</span><span class="t">research notes, every source opened and checked</span></li>
+      </ul>
+    </section>
+
+    <section class="section pad" id="work" aria-labelledby="work-title">
+      <div class="section-head grid12">
+        <div class="c1-7">
+          <span class="label section-num">01 / Work</span>
+          <h2 id="work-title">Selected work</h2>
+        </div>
+        <p class="intro c8-12">Six projects and the numbers they produced. The first one failed, and it taught me the most.</p>
+      </div>
+
+      <ol class="work-grid grid12">
+        <li class="tile">
+          <div class="media duo"><img src="assets/shots/market-impact-lab.png" width="1280" height="800" alt="Results table listing every model variant with trades, hit rate and net return per trade; none passes." loading="lazy"></div>
+          <div class="tile-meta"><span class="label">01 · 2026</span><span class="status status--fail">No edge</span></div>
+          <h3><a href="work/market-impact-lab.html">Market Impact Lab <span class="arrow" aria-hidden="true">↗</span></a></h3>
+          <p class="desc">Can a map of everything that moves Coinbase stock predict its next hour? I built a test strict enough to give an honest answer.</p>
+          <p class="result"><b>0 / 35</b> variants passed the bar written down before they ran.</p>
+          <ul class="tags" aria-label="Built with"><li>Python</li><li>LightGBM</li><li>PyTorch + LoRA</li><li>Walk-forward tests</li></ul>
+        </li>
+
+        <li class="tile">
+          <div class="media plain natural"><img src="assets/diagrams/agent-team.svg" width="1280" height="800" alt="Diagram: I approve anything risky; a coordinator hands work to four project teams, each with a lead and builders; the teams share notes on progress and decisions; helper models give research and second opinions." loading="lazy"></div>
+          <div class="tile-meta"><span class="label">02 · 2026</span><span class="status status--ok">In use</span></div>
+          <h3><a href="work/agent-team.html">Running a team of AI agents <span class="arrow" aria-hidden="true">↗</span></a></h3>
+          <p class="desc">About twenty Claude Code sessions working as one team, with anything risky coming to me first.</p>
+          <p class="result"><b>24</b> sessions on one live board.</p>
+          <ul class="tags" aria-label="Built with"><li>Claude Code</li><li>Herdr</li><li>Hooks</li><li>Git worktrees</li></ul>
+        </li>
+
+        <li class="tile">
+          <div class="media" aria-hidden="true">
+            <div class="cover">
+              <svg class="rings" viewBox="0 0 400 300" preserveAspectRatio="xMaxYMin slice" focusable="false"><g class="f-none s-blue" stroke-width="1"><circle cx="400" cy="0" r="70"/><circle cx="400" cy="0" r="120"/><circle cx="400" cy="0" r="170"/><circle cx="400" cy="0" r="220"/></g><circle class="f-blue" cx="400" cy="0" r="34"/></svg>
+              <span class="big">38/40</span>
+              <span class="small">voice commands right with the speech model chosen on my own recordings</span>
+            </div>
+          </div>
+          <div class="tile-meta"><span class="label">03 · 2026</span><span class="status status--ok">Shipped</span></div>
+          <h3><a href="work/jev-launcher.html">Jev Launcher <span class="arrow" aria-hidden="true">↗</span></a></h3>
+          <p class="desc">Press a hotkey, type or say what you want open, and it opens. A local model plans the steps; anything destructive waits for a spoken yes.</p>
+          <p class="result">Speech model picked on 46 of my recordings: <b>38/40</b> vs 30/40. <b>2,684</b> automated tests.</p>
+          <ul class="tags" aria-label="Built with"><li>TypeScript</li><li>Electron</li><li>Ollama</li><li>Parakeet</li></ul>
+        </li>
+
+        <li class="tile">
+          <div class="media duo"><img src="assets/shots/berry.png" width="1440" height="900" alt="Berry's home page: an example chat where Berry turns a sourdough idea into a brand kit and a one-page site waiting for approval." loading="lazy"></div>
+          <div class="tile-meta"><span class="label">09 · 2026</span><span class="status status--warn">Prototype</span></div>
+          <h3><a href="work/berry.html">Berry <span class="arrow" aria-hidden="true">↗</span></a></h3>
+          <p class="desc">An AI employee that turns an idea into a brand kit, a website and first drafts, and asks before anything goes public.</p>
+          <p class="result"><b>198/198</b> unit tests, <b>8/8</b> browser tests on desktop and phone.</p>
+          <ul class="tags" aria-label="Built with"><li>TypeScript</li><li>React</li><li>SQLite</li><li>Local LLM</li></ul>
+        </li>
+
+        <li class="tile">
+          <div class="media" aria-hidden="true">
+            <div class="cover">
+              <svg class="rings" viewBox="0 0 400 300" preserveAspectRatio="xMaxYMin slice" focusable="false"><g class="f-none s-blue" stroke-width="1"><circle cx="400" cy="0" r="70"/><circle cx="400" cy="0" r="120"/><circle cx="400" cy="0" r="170"/><circle cx="400" cy="0" r="220"/></g><circle class="f-blue" cx="400" cy="0" r="34"/></svg>
+              <span class="big">7/7</span>
+              <span class="small">planted bugs found when a local model's review is checked by a scanner</span>
+            </div>
+          </div>
+          <div class="tile-meta"><span class="label">04 · 2026</span><span class="status status--ok">In use</span></div>
+          <h3><a href="work/local-llm-mcp.html">local-llm-mcp <span class="arrow" aria-hidden="true">↗</span></a></h3>
+          <p class="desc">An MCP server that lets Claude Code hand small jobs to models on my own GPU, and checks every answer before Claude sees it.</p>
+          <p class="result">Model alone <b>5/7</b> planted bugs; with the scanner <b>7/7</b>. Secret-looking files never leave the PC.</p>
+          <ul class="tags" aria-label="Built with"><li>Node</li><li>MCP</li><li>Ollama</li><li>Local LLMs</li></ul>
+        </li>
+
+        <li class="tile">
+          <div class="media duo"><img src="assets/shots/dead-satellite-reach.png" width="1280" height="800" alt="Dead Satellite Reach: sliders for station altitude, orbit plane and fuel, and a result of 62 dead satellites in reach within 5 years." loading="lazy"></div>
+          <div class="tile-meta"><span class="label">06 · 2026</span><span class="status status--ok">Live</span></div>
+          <h3><a href="work/dead-satellite-reach.html">Dead Satellite Reach <span class="arrow" aria-hidden="true">↗</span></a></h3>
+          <p class="desc">A live estimate of which dead satellites one orbital station could reach, from public catalog data. It says on the page what it leaves out.</p>
+          <p class="result"><b>62</b> of 269 dead satellites in reach within 5 years (default settings).</p>
+          <ul class="tags" aria-label="Built with"><li>JavaScript</li><li>Python</li><li>CelesTrak</li><li>Orbital mechanics</li></ul>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section pad" id="index" aria-labelledby="index-title">
+      <div class="section-head grid12">
+        <div class="c1-7">
+          <span class="label section-num">02 / Index</span>
+          <h2 id="index-title">All projects</h2>
+        </div>
+        <p class="intro c8-12">Every project I've written up, with what it was built with and where it stands today.</p>
+      </div>
+      <table class="index">
+        <caption class="visually-hidden">Every project with its number, what it is, what it was built with and its status</caption>
+        <thead>
+          <tr><th scope="col" class="label">No.</th><th scope="col" class="label">Project</th><th scope="col" class="label">What it is</th><th scope="col" class="label">Built with</th><th scope="col" class="label">Status</th><th scope="col"><span class="visually-hidden">Open</span></th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="no">01</td><th scope="row"><a href="work/market-impact-lab.html">Market Impact Lab</a></th><td class="what">Tested whether a map of what moves Coinbase stock can call its next hour. It can't.</td><td class="stack">Python, LightGBM, PyTorch, LoRA</td><td class="st"><span class="status status--fail">No edge</span></td><td class="go" aria-hidden="true">→</td></tr>
+          <tr><td class="no">02</td><th scope="row"><a href="work/agent-team.html">Running a team of AI agents</a></th><td class="what">About twenty Claude Code sessions working as one team.</td><td class="stack">Claude Code, Herdr, hooks, worktrees</td><td class="st"><span class="status status--ok">In use</span></td><td class="go" aria-hidden="true">→</td></tr>
+          <tr><td class="no">03</td><th scope="row"><a href="work/jev-launcher.html">Jev Launcher</a></th><td class="what">Type or say what you want open; destructive steps wait for a spoken yes.</td><td class="stack">TypeScript, Electron, Ollama, Parakeet</td><td class="st"><span class="status status--ok">Shipped</span></td><td class="go" aria-hidden="true">→</td></tr>
+          <tr><td class="no">04</td><th scope="row"><a href="work/local-llm-mcp.html">local-llm-mcp</a></th><td class="what">Hands small jobs from Claude Code to models on my own GPU, and checks the answers.</td><td class="stack">Node, MCP, Ollama</td><td class="st"><span class="status status--ok">In use</span></td><td class="go" aria-hidden="true">→</td></tr>
+          <tr><td class="no">05</td><th scope="row"><a href="work/research-agent.html">Research Agent</a></th><td class="what">A local research chat with a citation on every claim and a checker for unsupported ones.</td><td class="stack">JavaScript, Ollama, GDELT, SEC EDGAR</td><td class="st"><span class="status status--ok">Shipped</span></td><td class="go" aria-hidden="true">→</td></tr>
+          <tr><td class="no">06</td><th scope="row"><a href="work/dead-satellite-reach.html">Dead Satellite Reach</a></th><td class="what">Which dead satellites one orbital station could reach, from public catalog data.</td><td class="stack">JavaScript, Python, CelesTrak</td><td class="st"><span class="status status--ok">Live</span></td><td class="go" aria-hidden="true">→</td></tr>
+          <tr><td class="no">07</td><th scope="row"><a href="work/limit-watch.html">Limit Watch</a></th><td class="what">A tray app that spots AI usage-limit messages and reads when they reset.</td><td class="stack">Electron, TypeScript, Ollama</td><td class="st"><span class="status status--warn">Prototype</span></td><td class="go" aria-hidden="true">→</td></tr>
+          <tr><td class="no">08</td><th scope="row"><a href="work/prompt-cleaner.html">Prompt Cleaner</a></th><td class="what">Select text, press a hotkey, and filler words and typos are cleaned in place.</td><td class="stack">Python standard library, Ollama</td><td class="st"><span class="status status--ok">Shipped</span></td><td class="go" aria-hidden="true">→</td></tr>
+          <tr><td class="no">09</td><th scope="row"><a href="work/berry.html">Berry</a></th><td class="what">An AI employee that turns an idea into a brand kit, a website and first drafts.</td><td class="stack">TypeScript, React, SQLite, local LLM</td><td class="st"><span class="status status--warn">Prototype</span></td><td class="go" aria-hidden="true">→</td></tr>
+          <tr><td class="no">10</td><th scope="row"><a href="work/fact-checker.html">Live Fact-Checker</a></th><td class="what">Underlines false sentences in a Google Doc as you type, with a fix and a source.</td><td class="stack">Chrome extension, Ollama, Wikipedia</td><td class="st"><span class="status status--warn">Spike</span></td><td class="go" aria-hidden="true">→</td></tr>
+          <tr><td class="no">11</td><th scope="row"><a href="work/knowledge-base.html">Research Knowledge Base</a></th><td class="what">Research notes with one rule: never cite a source that wasn't opened and checked.</td><td class="stack">Markdown, source checks</td><td class="st"><span class="status status--neutral">In use</span></td><td class="go" aria-hidden="true">→</td></tr>
+          <tr><td class="no">12</td><th scope="row"><a href="work/studysync.html">StudySync</a></th><td class="what">Group work in Google Docs where each student's AI agent coordinates in the open.</td><td class="stack">Node, Chrome extension, Ollama</td><td class="st"><span class="status status--warn">Prototype</span></td><td class="go" aria-hidden="true">→</td></tr>
+          <tr><td class="no">13</td><th scope="row"><a href="work/anvil-orbital.html">Anvil Orbital</a></th><td class="what">A space startup with my co-founder Hudson: retired satellites as data centers in orbit.</td><td class="stack">HTML, JavaScript, Python, CelesTrak</td><td class="st"><span class="status status--warn">Idea stage</span></td><td class="go" aria-hidden="true">→</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section pad" id="about" aria-labelledby="about-title">
+      <div class="grid12">
+        <div class="c1-6">
+          <span class="label section-num">03 / About</span>
+          <h2 id="about-title" class="big-statement">Most of my work is <em>directing AI agents</em>, then checking what they built.</h2>
+        </div>
+        <div class="prose c7-12">
+          <p>I run about twenty Claude Code sessions as a team, write the brief, decide how we'll know something works, and read what comes back. The agents write a lot of the code; my job is choosing what to build, setting the checks, and stopping when the numbers say stop.</p>
+          <p>The project I learned the most from failed: <a href="work/market-impact-lab.html">35 machine-learning model variants</a> tried to predict Coinbase stock, and none beat trading costs. Building the test that proved it taught me more than any model did.</p>
+          <p>I like software that runs on your own machine, keeps your data there, and says when it isn't sure.</p>
+        </div>
+      </div>
+      <ol class="steps">
+        <li><span class="k">01</span><h3>Brief</h3><p>Write down what we're building and how we'll know it works, before any code.</p></li>
+        <li><span class="k">02</span><h3>Checks first</h3><p>Tests and pass bars are set before the code or the model runs, so a lucky result can't sneak through.</p></li>
+        <li><span class="k">03</span><h3>Numbers out</h3><p>Results go on the page as measured, the failed ones included.</p></li>
+      </ol>
+    </section>
+
+    <section class="section pad" id="now" aria-labelledby="now-title">
+      <div class="grid12">
+        <div class="c1-4">
+          <span class="label section-num">04 / Now</span>
+          <h2 id="now-title" class="big-statement">Now</h2>
+        </div>
+        <ul class="now c5-12">
+          <li><span class="when label">Until May 2027</span><span>A frozen trading model logs paper calls, with no money, until 200 trades or 21 May 2027. The results stay sealed until then so I can't fool myself early.</span></li>
+          <li><span class="when label">Nov 2026</span><span>Writing up every project properly, starting with this site.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <svg class="rings-bg" viewBox="0 0 600 600" aria-hidden="true" focusable="false"><g class="f-none s-tint" stroke-width="1.5"><circle cx="300" cy="300" r="120"/><circle cx="300" cy="300" r="180"/><circle cx="300" cy="300" r="240"/><circle cx="300" cy="300" r="296" stroke-dasharray="2 9"/></g></svg>
+      <div class="pad grid12">
+        <div class="c1-6">
+          <span class="label section-num">05 / Contact</span>
+          <h2 id="contact-title">Let's talk.</h2>
+        </div>
+        <ul class="lines c7-12">
+          <li><span class="label">Email</span><a href="mailto:andreicmarinescu1@gmail.com">andreicmarinescu1@gmail.com</a></li>
+          <li><span class="label">GitHub</span><a href="https://github.com/Berryderi" rel="noopener">github.com/Berryderi</a></li>
+          <li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/andrei-cristian-marinescu-3ab3233bb" rel="noopener">Andrei Cristian Marinescu</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer pad">
+    <div class="row">
+      <p>&copy; 2026 Andrei Marinescu</p>
+      <p class="muted">Built with Claude Code agents. Set in Geist. No trackers, cookies or forms. Updated 25 Nov 2026.</p>
+    </div>
+  </footer>
+</body>
+</html>

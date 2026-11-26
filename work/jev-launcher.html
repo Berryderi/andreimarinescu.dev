@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; script-src 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Jev Launcher: Andrei Marinescu</title>
+  <meta name="description" content="Press Ctrl+Alt+Space, type or say what you want open in plain words, and it opens. &quot;chrome on my school account, rocket league, and claude&quot; opens all three. A local model plans the steps; anything destructive waits for a spoken yes.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner pad">
+      <a class="wordmark" href="../"><span class="dot" aria-hidden="true"></span>Andrei Marinescu</a>
+      <nav class="topnav" aria-label="Main">
+        <ul>
+          <li><a href="../#work">Work</a></li>
+          <li><a href="../#about">About</a></li>
+          <li><a href="../#now">Now</a></li>
+          <li><a href="../#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="case-hero grid12 pad">
+      <div class="c1-8">
+        <p class="crumb label"><a href="../#index">Work</a><span aria-hidden="true">/</span><span>03</span></p>
+        <h1>Jev Launcher</h1>
+        <p class="summary">Press Ctrl+Alt+Space, type or say what you want open in plain words, and it opens. "chrome on my school account, rocket league, and claude" opens all three. A local model plans the steps; anything destructive waits for a spoken yes.</p>
+      </div>
+      <dl class="case-spec c9-12" aria-label="Project facts">
+        <div><dt>Status</dt><dd><span class="status status--ok">Shipped v1 · agent in review</span></dd></div>
+          <div><dt>Built</dt><dd>Sep–Nov 2026</dd></div>
+          <div><dt>Role</dt><dd>Solo, directing Claude Code agents</dd></div>
+          <div><dt>Stack</dt><dd>TypeScript, Electron, Ollama, Parakeet</dd></div>
+          <div><dt>Runs on</dt><dd>Windows 11 and Ubuntu 24.04</dd></div>
+          <div><dt>Code</dt><dd>Private repository</dd></div>
+      </dl>
+    </header>
+
+  <figure class="case-cover">
+    <div class="media">
+      <div class="cover">
+        <svg class="rings" viewBox="0 0 400 300" preserveAspectRatio="xMaxYMin slice" aria-hidden="true" focusable="false"><g class="f-none s-blue" stroke-width="1"><circle cx="400" cy="0" r="70"/><circle cx="400" cy="0" r="120"/><circle cx="400" cy="0" r="170"/><circle cx="400" cy="0" r="220"/><circle cx="400" cy="0" r="270"/></g><circle class="f-blue" cx="400" cy="0" r="34"/></svg>
+        <span class="big">38/40</span>
+        <span class="small">voice commands right with the speech model chosen on my own recordings (runner-up 30/40)</span>
+      </div>
+    </div>
+  </figure>
+
+    <div class="case-body grid12 pad">
+      <nav class="toc" aria-label="On this page">
+        <div class="toc-inner">
+          <p class="label">On this page</p>
+          <ol>
+            <li><a href="#part-1"><span class="label">01</span>Problem</a></li>
+            <li><a href="#part-2"><span class="label">02</span>What I built</a></li>
+            <li><a href="#part-3"><span class="label">03</span>How it was tested</a></li>
+            <li><a href="#part-4"><span class="label">04</span>Results</a></li>
+            <li><a href="#part-5"><span class="label">05</span>What I learned</a></li>
+            <li><a href="#part-6"><span class="label">06</span>Links</a></li>
+          </ol>
+        </div>
+      </nav>
+      <div class="case-content">
+        <section class="sheet-section" id="part-1" aria-labelledby="s1">
+          <h2 id="s1"><span class="section-index">01</span>Problem</h2>
+          <div class="sheet-body">
+          <p>Opening the same apps every session takes clicks and remembering where each one lives. I wanted to say it once.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-2" aria-labelledby="s2">
+          <h2 id="s2"><span class="section-index">02</span>What I built</h2>
+          <div class="sheet-body">
+          <ul>
+              <li>A launcher that finds the apps on the device by itself, on Windows and Ubuntu.</li>
+              <li>Voice control and a hands-free pointer mode.</li>
+              <li>"Open anything": files and folders by name, and it asks when a name is ambiguous.</li>
+              <li>A PC agent on a local model that can see the screen and use apps. Anything destructive waits for a spoken yes.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-3" aria-labelledby="s3">
+          <h2 id="s3"><span class="section-index">03</span>How it was tested</h2>
+          <div class="sheet-body">
+          <ul>
+              <li>Speech model chosen by measurement on 46 of my own recordings.</li>
+              <li>An agent eval with tuned, held-out and blind cases, then runs in real apps.</li>
+              <li>2,684 automated tests on the agent branch.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-4" aria-labelledby="s4">
+          <h2 id="s4"><span class="section-index">04</span>Results</h2>
+          <div class="sheet-body">
+          <div class="table-scroll" tabindex="0" role="region" aria-label="Measured results."><table class="data-table">
+            <caption>Measured results.</caption>
+            <thead>
+              <tr><th scope="col">Measure</th><th scope="col">Result</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Speech model, commands right</th><td>Parakeet 38/40, runner-up 30/40</td></tr>
+              <tr><th scope="row">Agent eval</th><td>27/30 tuned, 7/10 held out, 7/10 blind</td></tr>
+              <tr><th scope="row">Warm-up fix (one run each)</th><td>14.2 s + 5.5 s before, 4.2 s + 0.25 s after</td></tr>
+              <tr><th scope="row">Window-focus fix in the real app</th><td>6/6</td></tr>
+            </tbody>
+          </table></div><p>Known gap: an app that is already open behind other windows is not brought forward yet.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-5" aria-labelledby="s5">
+          <h2 id="s5"><span class="section-index">05</span>What I learned</h2>
+          <div class="sheet-body">
+          <p>Measure on your own data before choosing a model: the speech model was picked from 46 of my own recordings.</p><p>Guards belong in code, not in the prompt: the agent once planned to delete a file with no confirm. The fix, enforced in code, is in review.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-6" aria-labelledby="s6">
+          <h2 id="s6"><span class="section-index">06</span>Links</h2>
+          <div class="sheet-body">
+          <p>Private repository.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <a class="next-band pad" href="local-llm-mcp.html">
+      <span class="label">Next project · 04</span>
+      <span class="t">local-llm-mcp <span class="arrow" aria-hidden="true">→</span></span>
+    </a>
+  </main>
+
+  <footer class="site-footer pad">
+    <div class="row">
+      <p>&copy; 2026 Andrei Marinescu</p>
+      <p class="muted">No trackers, cookies or forms. Updated 25 Nov 2026.</p>
+    </div>
+  </footer>
+</body>
+</html>

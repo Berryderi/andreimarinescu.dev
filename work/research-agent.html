@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; script-src 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Research Agent: Andrei Marinescu</title>
+  <meta name="description" content="A local research chat that answers with a citation on every claim, and a checker that flags any number, name or quote not found in the sources.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner pad">
+      <a class="wordmark" href="../"><span class="dot" aria-hidden="true"></span>Andrei Marinescu</a>
+      <nav class="topnav" aria-label="Main">
+        <ul>
+          <li><a href="../#work">Work</a></li>
+          <li><a href="../#about">About</a></li>
+          <li><a href="../#now">Now</a></li>
+          <li><a href="../#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="case-hero grid12 pad">
+      <div class="c1-8">
+        <p class="crumb label"><a href="../#index">Work</a><span aria-hidden="true">/</span><span>05</span></p>
+        <h1>Research Agent</h1>
+        <p class="summary">A local research chat. Type <code class="mono">research</code>, ask a question, and the model fetches news, Wikipedia, SEC filings or links you paste, then answers with a citation on every claim. A checker flags any number, name or quote that isn't in those sources.</p>
+      </div>
+      <dl class="case-spec c9-12" aria-label="Project facts">
+        <div><dt>Status</dt><dd><span class="status status--ok">Shipped</span></dd></div>
+          <div><dt>Built</dt><dd>Nov 2026</dd></div>
+          <div><dt>Stack</dt><dd>JavaScript, Ollama (local model), GDELT, SEC EDGAR, Wikipedia</dd></div>
+          <div><dt>Runs on</dt><dd>127.0.0.1 only</dd></div>
+          <div><dt>Code</dt><dd>Private repository</dd></div>
+      </dl>
+    </header>
+
+  <figure class="case-cover">
+    <div class="media">
+      <div class="cover">
+        <svg class="rings" viewBox="0 0 400 300" preserveAspectRatio="xMaxYMin slice" aria-hidden="true" focusable="false"><g class="f-none s-blue" stroke-width="1"><circle cx="400" cy="0" r="70"/><circle cx="400" cy="0" r="120"/><circle cx="400" cy="0" r="170"/><circle cx="400" cy="0" r="220"/><circle cx="400" cy="0" r="270"/></g><circle class="f-blue" cx="400" cy="0" r="34"/></svg>
+        <span class="big">8/14</span>
+        <span class="small">news queries answered after adding paced retries, up from 5 of 14</span>
+      </div>
+    </div>
+  </figure>
+
+    <div class="case-body grid12 pad">
+      <nav class="toc" aria-label="On this page">
+        <div class="toc-inner">
+          <p class="label">On this page</p>
+          <ol>
+            <li><a href="#part-1"><span class="label">01</span>Problem</a></li>
+            <li><a href="#part-2"><span class="label">02</span>What I built</a></li>
+            <li><a href="#part-3"><span class="label">03</span>How it was tested</a></li>
+            <li><a href="#part-4"><span class="label">04</span>Results</a></li>
+            <li><a href="#part-5"><span class="label">05</span>What I learned</a></li>
+            <li><a href="#part-6"><span class="label">06</span>Links</a></li>
+          </ol>
+        </div>
+      </nav>
+      <div class="case-content">
+        <section class="sheet-section" id="part-1" aria-labelledby="s1">
+          <h2 id="s1"><span class="section-index">01</span>Problem</h2>
+          <div class="sheet-body">
+          <p>Models make up numbers and quotes. I wanted answers I could trace to a source I could open.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-2" aria-labelledby="s2">
+          <h2 id="s2"><span class="section-index">02</span>What I built</h2>
+          <div class="sheet-body">
+          <ul>
+              <li>The chat page, served only on my PC.</li>
+              <li>The source fetchers.</li>
+              <li>The claim checker.</li>
+              <li>Nightly runs on fixed topics.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-3" aria-labelledby="s3">
+          <h2 id="s3"><span class="section-index">03</span>How it was tested</h2>
+          <div class="sheet-body">
+          <p>Unit tests (99 passing after the last merge) and before/after evals when the answer style changed.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-4" aria-labelledby="s4">
+          <h2 id="s4"><span class="section-index">04</span>Results</h2>
+          <div class="sheet-body">
+          <ul>
+              <li>In one eval run the model invented a detail and hardened an allegation. I fixed the prompt and the next run was clean.</li>
+              <li>GDELT news requests hit that service's per-IP rate limit about 85% of the time; I added paced retries, which raised answered queries from 5 of 14 to 8 of 14.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-5" aria-labelledby="s5">
+          <h2 id="s5"><span class="section-index">05</span>What I learned</h2>
+          <div class="sheet-body">
+          <p>A checker that reads the sources catches what the model won't admit. Free data sources have limits you have to design around.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-6" aria-labelledby="s6">
+          <h2 id="s6"><span class="section-index">06</span>Links</h2>
+          <div class="sheet-body">
+          <p>Private repository.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <a class="next-band pad" href="dead-satellite-reach.html">
+      <span class="label">Next project · 06</span>
+      <span class="t">Dead Satellite Reach <span class="arrow" aria-hidden="true">→</span></span>
+    </a>
+  </main>
+
+  <footer class="site-footer pad">
+    <div class="row">
+      <p>&copy; 2026 Andrei Marinescu</p>
+      <p class="muted">No trackers, cookies or forms. Updated 25 Nov 2026.</p>
+    </div>
+  </footer>
+</body>
+</html>

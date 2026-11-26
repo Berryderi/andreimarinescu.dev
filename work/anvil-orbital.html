@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; script-src 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Anvil Orbital: Andrei Marinescu</title>
+  <meta name="description" content="A two-founder space startup at the idea stage: turn retired satellites into data centers in orbit. We started with free software, and our own findings argue against part of the idea.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner pad">
+      <a class="wordmark" href="../"><span class="dot" aria-hidden="true"></span>Andrei Marinescu</a>
+      <nav class="topnav" aria-label="Main">
+        <ul>
+          <li><a href="../#work">Work</a></li>
+          <li><a href="../#about">About</a></li>
+          <li><a href="../#now">Now</a></li>
+          <li><a href="../#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="case-hero grid12 pad">
+      <div class="c1-8">
+        <p class="crumb label"><a href="../#index">Work</a><span aria-hidden="true">/</span><span>13</span></p>
+        <h1>Anvil Orbital</h1>
+        <p class="summary">A space startup at the idea stage, with my co-founder Hudson: turn retired satellites into data centers in orbit, and recycle the rest. None of the hardware exists, so we started with free software, and published the findings that argue against us.</p>
+      </div>
+      <dl class="case-spec c9-12" aria-label="Project facts">
+        <div><dt>Status</dt><dd><span class="status status--warn">Idea stage</span></dd></div>
+        <div><dt>Started</dt><dd>Nov 2026</dd></div>
+        <div><dt>Team</dt><dd>Hudson (co-founder, leads the non-technical side) and me (software)</dd></div>
+        <div><dt>Stack</dt><dd>Static HTML, CSS and JavaScript; Python model; CelesTrak data</dd></div>
+        <div><dt>Code</dt><dd>Public repository</dd></div>
+      </dl>
+    </header>
+
+  <figure class="case-cover">
+    <div class="media">
+      <div class="cover">
+        <svg class="rings" viewBox="0 0 400 300" preserveAspectRatio="xMaxYMin slice" aria-hidden="true" focusable="false"><g class="f-none s-blue" stroke-width="1"><circle cx="400" cy="0" r="70"/><circle cx="400" cy="0" r="120"/><circle cx="400" cy="0" r="170"/><circle cx="400" cy="0" r="220"/><circle cx="400" cy="0" r="270"/></g><circle class="f-blue" cx="400" cy="0" r="34"/></svg>
+        <span class="big">$18.6M</span>
+        <span class="small">our model’s cost to collect one dead satellite for parts; the parts are worth $46k–$116k</span>
+      </div>
+    </div>
+  </figure>
+
+    <div class="case-body grid12 pad">
+      <nav class="toc" aria-label="On this page">
+        <div class="toc-inner">
+          <p class="label">On this page</p>
+          <ol>
+            <li><a href="#part-1"><span class="label">01</span>Problem</a></li>
+            <li><a href="#part-2"><span class="label">02</span>What we built</a></li>
+            <li><a href="#part-3"><span class="label">03</span>Who does what</a></li>
+            <li><a href="#part-4"><span class="label">04</span>What we found</a></li>
+            <li><a href="#part-5"><span class="label">05</span>Where it stands</a></li>
+            <li><a href="#part-6"><span class="label">06</span>Links</a></li>
+          </ol>
+        </div>
+      </nav>
+      <div class="case-content">
+        <section class="sheet-section" id="part-1" aria-labelledby="s1">
+          <h2 id="s1"><span class="section-index">01</span>Problem</h2>
+          <div class="sheet-body">
+          <p>Very large satellite fleets are being planned. When a low-orbit satellite retires today, it usually burns up or stays up as a dead object. We wanted to find out whether some of them are worth more in orbit.</p>
+          <p>Public catalogs list about 500 to 1,900 dead satellites in low orbit, depending on the catalog (CelesTrak 529, GCAT 1,878). Nobody has checked each one with its owner.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-2" aria-labelledby="s2">
+          <h2 id="s2"><span class="section-index">02</span>What we built</h2>
+          <div class="sheet-body">
+          <p>The concept: with their owners’ agreement, tugs would bring retired satellites to a station in low orbit, where robots service them. A high-power satellite gets a compute module and goes back out as a data center node; the rest are recycled for parts. None of that hardware exists, so we started with software anyone can use today.</p>
+          <ul>
+            <li><strong>Fleet Retirement Planner:</strong> enter a fleet’s numbers and four answers about its retirement update, with a decay chart.</li>
+            <li><strong>Simulator:</strong> real fleets (Starlink, OneWeb, Amazon Leo, Planet) drawn from a CelesTrak data snapshot.</li>
+            <li><strong>Findings:</strong> our desk research and models, including the parts that argue against the idea.</li>
+            <li><a href="dead-satellite-reach.html">Dead Satellite Reach</a>, the first demo: which dead satellites one station could reach.</li>
+          </ul>
+          <p>The site is static, with no tracking or forms.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-3" aria-labelledby="s3">
+          <h2 id="s3"><span class="section-index">03</span>Who does what</h2>
+          <div class="sheet-body">
+          <p>Anvil Orbital is a two-founder project, started on 2 November 2026 by two high school students in Ontario. <strong>Hudson</strong>, my co-founder, leads the non-technical side. I build the software.</p>
+          <p>We use AI coding and research tools, and we say on the site where nobody has checked the results.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-4" aria-labelledby="s4">
+          <h2 id="s4"><span class="section-index">04</span>What we found</h2>
+          <div class="sheet-body">
+          <div class="callout"><p>Collecting dead satellites for their hardware doesn’t pay: about $18.6M per satellite in our model, against $46k–$116k for the reusable parts.</p></div>
+          <ul>
+            <li>Even with every input in its favour, the model still costs about $3M per satellite.</li>
+            <li>The parts estimate assumes a third of a 700 kg satellite is reusable, at launch prices of $200–500/kg.</li>
+            <li>We found no completed example of a robot capturing a satellite in low orbit that wasn’t built for it.</li>
+            <li>So we stopped asking about salvage and started asking about retirement: do fleet designers see it as an open problem someone would pay to solve?</li>
+          </ul>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-5" aria-labelledby="s5">
+          <h2 id="s5"><span class="section-index">05</span>Where it stands</h2>
+          <div class="sheet-body">
+          <ul>
+            <li>Idea stage. No company has been formed and we’ve taken no investment.</li>
+            <li>Nobody has agreed to pay.</li>
+            <li>No spacecraft engineer has checked the models, and we don’t have one on the team yet.</li>
+            <li>We’re under 18, so an adult would need to sign any contract.</li>
+          </ul>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-6" aria-labelledby="s6">
+          <h2 id="s6"><span class="section-index">06</span>Links</h2>
+          <div class="sheet-body">
+          <ul>
+            <li>Live site: <a href="https://anvilorbital.com" rel="noopener noreferrer">anvilorbital.com</a></li>
+            <li>Code: <a href="https://github.com/Berryderi/anvilorbital" rel="noopener noreferrer">github.com/Berryderi/anvilorbital</a></li>
+          </ul>
+          <p class="dated">Facts on this page come from the Anvil Orbital site, November 2026. Estimates are unchecked models, not quotes or promises.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <a class="next-band pad" href="market-impact-lab.html">
+      <span class="label">Next project · 01</span>
+      <span class="t">Market Impact Lab <span class="arrow" aria-hidden="true">→</span></span>
+    </a>
+  </main>
+
+  <footer class="site-footer pad">
+    <div class="row">
+      <p>&copy; 2026 Andrei Marinescu</p>
+      <p class="muted">No trackers, cookies or forms. Updated 25 Nov 2026.</p>
+    </div>
+  </footer>
+</body>
+</html>

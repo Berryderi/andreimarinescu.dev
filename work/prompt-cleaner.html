@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; script-src 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Prompt Cleaner: Andrei Marinescu</title>
+  <meta name="description" content="Select text, press a hotkey, and filler words and typos are cleaned in place. Text never leaves my PC.">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner pad">
+      <a class="wordmark" href="../"><span class="dot" aria-hidden="true"></span>Andrei Marinescu</a>
+      <nav class="topnav" aria-label="Main">
+        <ul>
+          <li><a href="../#work">Work</a></li>
+          <li><a href="../#about">About</a></li>
+          <li><a href="../#now">Now</a></li>
+          <li><a href="../#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="case-hero grid12 pad">
+      <div class="c1-8">
+        <p class="crumb label"><a href="../#index">Work</a><span aria-hidden="true">/</span><span>08</span></p>
+        <h1>Prompt Cleaner</h1>
+        <p class="summary">Select text, press a hotkey, and filler words and typos are cleaned in place. Text never leaves my PC.</p>
+      </div>
+      <dl class="case-spec c9-12" aria-label="Project facts">
+        <div><dt>Status</dt><dd><span class="status status--ok">Shipped v1.1</span></dd></div>
+          <div><dt>Built</dt><dd>Nov 2026</dd></div>
+          <div><dt>Stack</dt><dd>Python 3.14 standard library only, Ollama (qwen3:8b)</dd></div>
+          <div><dt>Code</dt><dd>Public repository, MIT</dd></div>
+      </dl>
+    </header>
+
+  <figure class="case-cover">
+    <div class="media">
+      <div class="cover">
+        <svg class="rings" viewBox="0 0 400 300" preserveAspectRatio="xMaxYMin slice" aria-hidden="true" focusable="false"><g class="f-none s-blue" stroke-width="1"><circle cx="400" cy="0" r="70"/><circle cx="400" cy="0" r="120"/><circle cx="400" cy="0" r="170"/><circle cx="400" cy="0" r="220"/><circle cx="400" cy="0" r="270"/></g><circle class="f-blue" cx="400" cy="0" r="34"/></svg>
+        <span class="big">9/9</span>
+        <span class="small">on my test set, with no content lost (after v1.1)</span>
+      </div>
+    </div>
+  </figure>
+
+    <div class="case-body grid12 pad">
+      <nav class="toc" aria-label="On this page">
+        <div class="toc-inner">
+          <p class="label">On this page</p>
+          <ol>
+            <li><a href="#part-1"><span class="label">01</span>Problem</a></li>
+            <li><a href="#part-2"><span class="label">02</span>What I built</a></li>
+            <li><a href="#part-3"><span class="label">03</span>How it was tested</a></li>
+            <li><a href="#part-4"><span class="label">04</span>Results</a></li>
+            <li><a href="#part-5"><span class="label">05</span>What I learned</a></li>
+            <li><a href="#part-6"><span class="label">06</span>Links</a></li>
+          </ol>
+        </div>
+      </nav>
+      <div class="case-content">
+        <section class="sheet-section" id="part-1" aria-labelledby="s1">
+          <h2 id="s1"><span class="section-index">01</span>Problem</h2>
+          <div class="sheet-body">
+          <p>I dictate most of my prompts. Dictation leaves "um", "like" and typos, and a model asked to clean text tends to rewrite it.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-2" aria-labelledby="s2">
+          <h2 id="s2"><span class="section-index">02</span>What I built</h2>
+          <div class="sheet-body">
+          <p>Rules first, then a local model, then a guard that removes any word the model added and restores content it dropped. Only filler, function words and repeats may disappear. In a terminal the hotkey opens a small dictation box instead.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-3" aria-labelledby="s3">
+          <h2 id="s3"><span class="section-index">03</span>How it was tested</h2>
+          <div class="sheet-body">
+          <p>A test set of 9 of my own real prompts; 96 unit tests.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-4" aria-labelledby="s4">
+          <h2 id="s4"><span class="section-index">04</span>Results</h2>
+          <div class="sheet-body">
+          <ul>
+              <li>9/9 on my test set with no content lost (after v1.1).</li>
+              <li>About 2 seconds up to 100 words.</li>
+              <li>Zero installs.</li>
+            </ul><p>The failure: v1 dropped real content on 2 of the 9 samples and the similarity check missed it. v1.1 added the repair guard.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-5" aria-labelledby="s5">
+          <h2 id="s5"><span class="section-index">05</span>What I learned</h2>
+          <div class="sheet-body">
+          <p>Never let a model edit your words without a guard that proves nothing new was added.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-6" aria-labelledby="s6">
+          <h2 id="s6"><span class="section-index">06</span>Links</h2>
+          <div class="sheet-body">
+          <ul>
+              <li>Code (MIT licence): <a href="https://github.com/Berryderi/prompt-cleaner" rel="noopener noreferrer">github.com/Berryderi/prompt-cleaner</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <a class="next-band pad" href="berry.html">
+      <span class="label">Next project · 09</span>
+      <span class="t">Berry <span class="arrow" aria-hidden="true">→</span></span>
+    </a>
+  </main>
+
+  <footer class="site-footer pad">
+    <div class="row">
+      <p>&copy; 2026 Andrei Marinescu</p>
+      <p class="muted">No trackers, cookies or forms. Updated 25 Nov 2026.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" width="1280" height="800" role="img" aria-labelledby="t d" font-family="Geist, system-ui, sans-serif">
+  <title id="t">How the agent team is organised</title>
+  <desc id="d">I sit at the top and approve anything risky. A coordinator hands work to four project teams, each with a lead and builders, and gets results and questions back. The teams share notes on progress and decisions. Helper models for research and second opinions sit to the side.</desc>
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#121318"/>
+    </marker>
+  </defs>
+  <rect width="1280" height="800" fill="#ECEAE3"/>
+
+  <!-- Me: the one Klein-blue box -->
+  <rect x="380" y="20" width="520" height="110" rx="4" fill="#2B4BF2" stroke="#121318" stroke-width="2"/>
+  <text x="640" y="58" text-anchor="middle" font-size="28" font-weight="700" fill="#F4F2ED">Me</text>
+  <text x="640" y="90" text-anchor="middle" font-size="20" fill="#F4F2ED">Approves anything risky:</text>
+  <text x="640" y="114" text-anchor="middle" font-size="20" fill="#F4F2ED">money, accounts, publishing.</text>
+
+  <!-- Me <-> Coordinator -->
+  <line x1="640" y1="132" x2="640" y2="198" stroke="#121318" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+  <text x="660" y="172" font-size="20" fill="#121318">questions / answers</text>
+
+  <!-- Coordinator -->
+  <rect x="380" y="200" width="520" height="90" rx="4" fill="#F4F2ED" stroke="#121318" stroke-width="2"/>
+  <text x="640" y="238" text-anchor="middle" font-size="28" font-weight="700" fill="#121318">Coordinator</text>
+  <text x="640" y="270" text-anchor="middle" font-size="20" fill="#121318">Hands out work, tracks progress</text>
+
+  <!-- Coordinator <-> spaces -->
+  <line x1="580" y1="292" x2="580" y2="348" stroke="#121318" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="568" y="326" text-anchor="end" font-size="20" fill="#121318">work</text>
+  <line x1="700" y1="350" x2="700" y2="292" stroke="#121318" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="712" y="326" font-size="20" fill="#121318">results / questions</text>
+  <line x1="130" y1="350" x2="850" y2="350" stroke="#121318" stroke-width="2"/>
+  <line x1="580" y1="350" x2="700" y2="350" stroke="#121318" stroke-width="2"/>
+  <line x1="130" y1="350" x2="130" y2="418" stroke="#121318" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+  <line x1="370" y1="350" x2="370" y2="418" stroke="#121318" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+  <line x1="610" y1="350" x2="610" y2="418" stroke="#121318" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+  <line x1="850" y1="350" x2="850" y2="418" stroke="#121318" stroke-width="2" marker-start="url(#ah)" marker-end="url(#ah)"/>
+
+  <!-- Four spaces -->
+  <g stroke="#121318" stroke-width="2">
+    <rect x="20" y="420" width="220" height="250" rx="4" fill="#F4F2ED"/>
+    <rect x="260" y="420" width="220" height="250" rx="4" fill="#F4F2ED"/>
+    <rect x="500" y="420" width="220" height="250" rx="4" fill="#F4F2ED"/>
+    <rect x="740" y="420" width="220" height="250" rx="4" fill="#F4F2ED"/>
+  </g>
+  <g font-size="22" font-weight="700" fill="#121318" text-anchor="middle">
+    <text x="130" y="456">Project A</text>
+    <text x="370" y="456">Project B</text>
+    <text x="610" y="456">Project C</text>
+    <text x="850" y="456">Project D</text>
+  </g>
+  <g stroke="#121318" stroke-width="1.5" fill="#D9DFFC">
+    <rect x="36" y="476" width="188" height="56" rx="4"/>
+    <rect x="276" y="476" width="188" height="56" rx="4"/>
+    <rect x="516" y="476" width="188" height="56" rx="4"/>
+    <rect x="756" y="476" width="188" height="56" rx="4"/>
+    <rect x="36" y="552" width="188" height="90" rx="4"/>
+    <rect x="276" y="552" width="188" height="90" rx="4"/>
+    <rect x="516" y="552" width="188" height="90" rx="4"/>
+    <rect x="756" y="552" width="188" height="90" rx="4"/>
+  </g>
+  <g font-size="20" fill="#121318" text-anchor="middle">
+    <text x="130" y="512">Lead</text>
+    <text x="370" y="512">Lead</text>
+    <text x="610" y="512">Lead</text>
+    <text x="850" y="512">Lead</text>
+    <text x="130" y="604">Builders</text>
+    <text x="370" y="604">Builders</text>
+    <text x="610" y="604">Builders</text>
+    <text x="850" y="604">Builders</text>
+  </g>
+
+  <!-- Spaces <-> Shared files -->
+  <g stroke="#121318" stroke-width="2">
+    <line x1="130" y1="672" x2="130" y2="728" marker-start="url(#ah)" marker-end="url(#ah)"/>
+    <line x1="370" y1="672" x2="370" y2="728" marker-start="url(#ah)" marker-end="url(#ah)"/>
+    <line x1="610" y1="672" x2="610" y2="728" marker-start="url(#ah)" marker-end="url(#ah)"/>
+    <line x1="850" y1="672" x2="850" y2="728" marker-start="url(#ah)" marker-end="url(#ah)"/>
+  </g>
+  <rect x="20" y="730" width="940" height="56" rx="4" fill="#F4F2ED" stroke="#121318" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="490" y="765" text-anchor="middle" font-size="22" fill="#121318"><tspan font-weight="700">Shared notes:</tspan> progress, decisions, questions for me</text>
+
+  <!-- Side workers, dashed -->
+  <g stroke="#121318" stroke-width="2" fill="none">
+    <line x1="850" y1="350" x2="1268" y2="350" stroke-dasharray="8 6"/>
+    <line x1="1125" y1="350" x2="1125" y2="418" stroke-dasharray="8 6" marker-start="url(#ah)" marker-end="url(#ah)"/>
+    <polyline points="1268,350 1268,610 1252,610" stroke-dasharray="8 6" marker-end="url(#ah)"/>
+  </g>
+  <rect x="1000" y="420" width="250" height="110" rx="4" fill="#F4F2ED" stroke="#121318" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="1125" y="462" text-anchor="middle" font-size="22" font-weight="700" fill="#121318">Helper model</text>
+  <text x="1125" y="496" text-anchor="middle" font-size="20" fill="#121318">research</text>
+  <rect x="1000" y="560" width="250" height="110" rx="4" fill="#F4F2ED" stroke="#121318" stroke-width="2" stroke-dasharray="8 6"/>
+  <text x="1125" y="602" text-anchor="middle" font-size="22" font-weight="700" fill="#121318">Helper model</text>
+  <text x="1125" y="636" text-anchor="middle" font-size="20" fill="#121318">second opinions</text>
+</svg>

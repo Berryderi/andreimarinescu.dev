@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self'; base-uri 'none'; script-src 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Dead Satellite Reach: Andrei Marinescu</title>
+  <meta name="description" content="A public page that answers one question: which dead satellites could a single orbital station reach, and who owns them?">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/site.css">
+  <script src="../assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="topbar-inner pad">
+      <a class="wordmark" href="../"><span class="dot" aria-hidden="true"></span>Andrei Marinescu</a>
+      <nav class="topnav" aria-label="Main">
+        <ul>
+          <li><a href="../#work">Work</a></li>
+          <li><a href="../#about">About</a></li>
+          <li><a href="../#now">Now</a></li>
+          <li><a href="../#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="case-hero grid12 pad">
+      <div class="c1-8">
+        <p class="crumb label"><a href="../#index">Work</a><span aria-hidden="true">/</span><span>06</span></p>
+        <h1>Dead Satellite Reach</h1>
+        <p class="summary">A public page that answers one question: which dead satellites could a single orbital station reach, and who owns them?</p>
+      </div>
+      <dl class="case-spec c9-12" aria-label="Project facts">
+        <div><dt>Status</dt><dd><span class="status status--ok">Live</span></dd></div>
+          <div><dt>Built</dt><dd>Nov 2026</dd></div>
+          <div><dt>Stack</dt><dd>HTML, JavaScript, Python (data build), CelesTrak data</dd></div>
+          <div><dt>Code</dt><dd>Public repository</dd></div>
+      </dl>
+    </header>
+
+  <figure class="case-cover">
+    <div class="media duo"><img src="../assets/shots/dead-satellite-reach.png" width="1280" height="800" alt="Screenshot of the live page with its default settings: a station altitude of 700 km, an orbit plane of 6:00 pm, fuel per trip of 500 m/s and a wait of 5 years. The headline reads 62 dead satellites in reach, out of 269 in the catalog set."></div>
+    <figcaption class="muted">The live page: 62 dead satellites in reach within 5 years at 700 km, out of 269 in the catalog set (default settings).</figcaption>
+  </figure>
+
+    <div class="case-body grid12 pad">
+      <nav class="toc" aria-label="On this page">
+        <div class="toc-inner">
+          <p class="label">On this page</p>
+          <ol>
+            <li><a href="#part-1"><span class="label">01</span>Problem</a></li>
+            <li><a href="#part-2"><span class="label">02</span>What I built</a></li>
+            <li><a href="#part-3"><span class="label">03</span>How it works</a></li>
+            <li><a href="#part-4"><span class="label">04</span>Results</a></li>
+            <li><a href="#part-5"><span class="label">05</span>What I learned</a></li>
+            <li><a href="#part-6"><span class="label">06</span>Links</a></li>
+          </ol>
+        </div>
+      </nav>
+      <div class="case-content">
+        <section class="sheet-section" id="part-1" aria-labelledby="s1">
+          <h2 id="s1"><span class="section-index">01</span>Problem</h2>
+          <div class="sheet-body">
+          <p>An idea for a station that clears dead satellites starts with a simple question: which ones could it even get to?</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-2" aria-labelledby="s2">
+          <h2 id="s2"><span class="section-index">02</span>What I built</h2>
+          <div class="sheet-body">
+          <p>An interactive estimate with sliders for altitude, orbit plane, fuel per trip and waiting time.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-3" aria-labelledby="s3">
+          <h2 id="s3"><span class="section-index">03</span>How it works</h2>
+          <div class="sheet-body">
+          <ul>
+              <li>CelesTrak catalog data, filtered to non-operational, near-circular payloads tilted 90 to 105 degrees between 400 and 2,000 km.</li>
+              <li>A one-way plane and altitude change, scanned every 5 days through the wait, with orbit planes drifting at constant J2 rates.</li>
+              <li>Tests compare against counts from a separate Python calculation on the same data.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-4" aria-labelledby="s4">
+          <h2 id="s4"><span class="section-index">04</span>Results</h2>
+          <div class="sheet-body">
+          <h3>What it leaves out</h3>
+          <ul>
+              <li>The return trip.</li>
+              <li>Phasing inside the orbit.</li>
+              <li>Catching tumbling objects.</li>
+              <li>Long-term inclination drift.</li>
+              <li>Whether each satellite is really dead.</li>
+            </ul>
+          <p>Not reviewed by a spacecraft engineer.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-5" aria-labelledby="s5">
+          <h2 id="s5"><span class="section-index">05</span>What I learned</h2>
+          <div class="sheet-body">
+          <p>Say what the model leaves out, on the page itself. The station doesn't exist and no owner has agreed to anything; the page says so.</p>
+          </div>
+        </section>
+
+        <section class="sheet-section" id="part-6" aria-labelledby="s6">
+          <h2 id="s6"><span class="section-index">06</span>Links</h2>
+          <div class="sheet-body">
+          <ul>
+              <li>Live page: <a href="https://berryderi.github.io/dead-satellite-reach/" rel="noopener noreferrer">https://berryderi.github.io/dead-satellite-reach/</a></li>
+              <li>Code: <a href="https://github.com/Berryderi/dead-satellite-reach" rel="noopener noreferrer">https://github.com/Berryderi/dead-satellite-reach</a></li>
+              <li>Part of <a href="anvil-orbital.html">Anvil Orbital</a>, the startup it was the first demo for.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <a class="next-band pad" href="limit-watch.html">
+      <span class="label">Next project · 07</span>
+      <span class="t">Limit Watch <span class="arrow" aria-hidden="true">→</span></span>
+    </a>
+  </main>
+
+  <footer class="site-footer pad">
+    <div class="row">
+      <p>&copy; 2026 Andrei Marinescu</p>
+      <p class="muted">No trackers, cookies or forms. Updated 25 Nov 2026.</p>
+    </div>
+  </footer>
+</body>
+</html>
